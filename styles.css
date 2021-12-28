@@ -67,13 +67,13 @@ h1 > span {
   background: radial-gradient(
     circle,
     rgba(51, 51, 51, 1) 0%,
-    rgba(30, 30, 30, 1) 29%,
-    rgba(28, 28, 28, 1) 71%,
     rgba(18, 18, 18, 1) 100%
   );
   z-index: -1;
 }
 .screen {
+  position: relative;
+  font-family: "Viga", sans-serif;
   flex-grow: 0.2;
   width: 100%;
   height: 20%;
@@ -86,6 +86,32 @@ h1 > span {
   color: var(--main-bg);
   padding: 0.2rem 0.4rem;
   box-shadow: inset 4px 4px 16px #999999, inset -8px -8px 16px #ffffff;
+}
+.message {
+  position: relative;
+  width: 100%;
+  height: 20%;
+  background: trasnparent;
+  color: var(--main-bg);
+  padding: 0.2rem 0.4rem;
+  box-shadow: inset 4px 4px 16px #999999, inset -8px -8px 16px #ffffff;
+}
+.message::after {
+  font-size: 0.3em;
+  content: "The number is too big!";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: transparent;
+}
+.screen > span {
+  font-size: 0.3em;
+  color: var(--main-bg);
+  position: absolute;
+  top: 0;
+  right: 0.5em;
 }
 .numpad {
   flex-grow: 1;
@@ -106,7 +132,16 @@ button {
   border-radius: 9px;
   background: var(--secondary-bg);
   box-shadow: inset 8px 8px 16px #999999, inset -8px -8px 16px #ffffff;
-  transition: all 0.1s ease-out;
+  transition: all 0.1s ease-in-out;
+}
+button:active {
+  transform: scale(0.98);
+}
+.streched:active {
+  transform: scale(0.99);
+}
+.operator {
+  background: var(--main-accent);
 }
 .streched {
   grid-column: span 2;
@@ -122,9 +157,6 @@ button {
     font-size: 22px;
   }
   button:hover {
-    transform: scale(0.98);
-  }
-  .streched:hover {
-    transform: scale(0.99);
+    background: var(--main-accent);
   }
 }
