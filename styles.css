@@ -71,12 +71,22 @@ h1 > span {
   );
   z-index: -1;
 }
+.calculator > span {
+  font-size: 1.5em;
+  font-family: "Viga", sans-serif;
+  color: var(--main-bg);
+  position: absolute;
+  top: 2px;
+  right: 8px;
+  z-index: 200;
+  display: block;
+}
 .screen {
   position: relative;
   font-family: "Viga", sans-serif;
   flex-grow: 0.2;
   width: 100%;
-  height: 20%;
+  height: 25%;
   background: lightgray;
   display: flex;
   justify-content: flex-end;
@@ -105,13 +115,6 @@ h1 > span {
   right: 0;
   left: 0;
   background: transparent;
-}
-.screen > span {
-  font-size: 0.3em;
-  color: var(--main-bg);
-  position: absolute;
-  top: 0;
-  right: 0.5em;
 }
 .numpad {
   flex-grow: 1;

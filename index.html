@@ -10,40 +10,41 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@700&family=Viga&display=swap"
         rel="stylesheet">
-    <title>Document</title>
+    <title>Dark Calculator by AntoKonto</title>
 </head>
 
 <body>
     <main>
-        <h1>Calculator<span>by AntoKonte</span></h1>
+        <h1>Calculator<span>by AntoKonto</span></h1>
         <div class="calculator">
-            <div class="screen">0<span id="operator-display">+</span></div>
+            <span id="operator-display"></span>
+            <div class="screen"></div>
             <div class="numpad">
-                <button class="streched" id="clear">AC</button>
-                <button id="swap-sign">+/-</button>
-                <button class="operator">/</button>
-                <button>7</button>
-                <button>8</button>
-                <button>9</button>
-                <button class="operator">*</button>
-                <button>4</button>
-                <button>5</button>
-                <button>6</button>
-                <button class="operator">-</button>
-                <button>1</button>
-                <button>2</button>
-                <button>3</button>
-                <button class="operator">+</button>
-                <button>0</button>
-                <button>00</button>
-                <button>.</button>
-                <button class="operator">=</button>
+                <button data-function="clear" class="streched" id="clear">AC</button>
+                <button data-function="backspace" id="backspace">Del</button>
+                <button data-function="operator" class="operator">/</button>
+                <button data-function="number">7</button>
+                <button data-function="number">8</button>
+                <button data-function="number">9</button>
+                <button data-function="operator" class="operator">*</button>
+                <button data-function="number">4</button>
+                <button data-function="number">5</button>
+                <button data-function="number">6</button>
+                <button data-function="operator" class="operator">-</button>
+                <button data-function="number">1</button>
+                <button data-function="number">2</button>
+                <button data-function="number">3</button>
+                <button data-function="operator" class="operator">+</button>
+                <button data-function="number">0</button>
+                <button data-function="number">00</button>
+                <button data-function="decimal" id="decimal">.</button>
+                <button data-function="equals" id="equals" class="operator">=</button>
             </div>
         </div>
     </main>
 
 
-    <script src="brain.js"></script>
+    <script src="brain2.js"></script>
 </body>
 
 </html>
